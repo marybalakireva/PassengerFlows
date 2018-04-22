@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Passenger\nFlows</string>
+    <string name="collect_data">Сбор данных</string>
+    <string name="export">Экспорт</string>
+    <string name="settings">Настройки</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+	<string name="title_no_permission">PassengerFlows</string>
+    <string name="no_permission">Приложению необходимы права доступа к внешней памяти устройства чтобы экспортировать в неё данные.</string>
+    <string name="ok">Ок</string>
+    <string name="go_to_settings">Откройте настройки и предоставте приложению право на запись в память телефона</string>
+    <string name="for_what">Права необходимы для экспорта данных о потоках пассажиров в память устройства.</string>
+</resources>
