@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             onCreateContinue();
         } else {
             setContentView(R.layout.no_permission_storage);
-            getPermission();
+            requestPerms();
         }
     }
 
@@ -235,16 +235,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view View запускающий данный метод
      */
     public void onClickPermission(View view) {
-        getPermission();
-    }
-
-    /**
-     * Метод для поулчения прав доступа к записи данных в память телефона
-     */
-    private void getPermission() {
         if (!hasPermissions()) {
             requestPerms();
-            Toast.makeText(this, R.string.for_what, Toast.LENGTH_SHORT).show();
         } else {
             onCreateContinue();
         }
