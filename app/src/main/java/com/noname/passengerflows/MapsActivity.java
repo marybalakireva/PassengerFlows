@@ -107,7 +107,7 @@ public class MapsActivity extends FragmentActivity implements
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         /*
-        По факту для получения координат достаточно лабуды ниже(с кеком)
+        По факту для получения координат достаточно лабуды ниже(с loc)
         Вряд ли мне нужно будет динамически смотреть координаты, так что этого должно хватить.
         Вызвал - забыл.
         Листенер уже явно лишнее.

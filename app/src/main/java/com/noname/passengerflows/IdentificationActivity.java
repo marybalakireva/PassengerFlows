@@ -67,6 +67,10 @@ public class IdentificationActivity extends AppCompatActivity {
      */
     private void addOnCLickButtonListener() {
         begin.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на кнопку begin
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 saveSettings();
