@@ -124,6 +124,13 @@ public class DataCollectionActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         congestion.setAdapter(adapter);
         congestion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            /**
+             * Обработчик нажатий на элементы списка
+             * @param adapterView Объект Spinner, в котором произошло событие выбора элемента
+             * @param view Объект View внутри Spinnera, который представляет выбранный элемент
+             * @param i Индекс выбранного элемента в адаптере
+             * @param l Идентификатор строки того элемента, который был выбран
+             */
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 description.setText(congestionDesc[i]);
