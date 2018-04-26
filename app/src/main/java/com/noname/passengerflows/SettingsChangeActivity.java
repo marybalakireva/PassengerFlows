@@ -63,13 +63,17 @@ public class SettingsChangeActivity extends AppCompatActivity {
     }
 
     /**
-     * Слушатель кнопок. Обрабатывает единственную кнопку - saveDataButton.
-     * По нажатию на кнопку поля ввода проверяются на не пустоту.
-     * В случае, когда хотя бы одно из полей ввода пустое - всплывает окошко с сообщением "Заполните все поля".
-     * Если все поля заполнены - вызывается диалоговое окно для подтверждения сохранения настроек.
+     * Слушатель нажатий на кнопки
      */
     private void addOnButtonClickListener() {
         saveDataButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на кнопку "сохранить"
+             * По нажатию на кнопку поля ввода проверяются на не пустоту.
+             * В случае, когда хотя бы одно из полей ввода пустое - всплывает окошко с сообщением "Заполните все поля".
+             * Если все поля заполнены - вызывается диалоговое окно для подтверждения сохранения настроек.
+             * @param view View кнопки "сохранить"
+             */
             @Override
             public void onClick(View view) {
                 if ((fullNameField.getText().toString().isEmpty()) || (phoneNumberField.getText().toString().isEmpty())) {

@@ -151,24 +151,40 @@ public class DataCollectionActivity extends AppCompatActivity {
      */
     private void addOnButtonClickListener() {
         goBack.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на кнопку назад
+             * @param view View кнопки назад
+             */
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
         time.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на поле выбора времени
+             * @param view View поля выбора времени
+             */
             @Override
             public void onClick(View view) {
                 setTime();
             }
         });
         date.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на поле выбора даты
+             * @param view View поля выбора даты
+             */
             @Override
             public void onClick(View view) {
                 setDate();
             }
         });
         detectAuto.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на кнопку автоопределения времени
+             * @param view View кнопки автоопределения времени
+             */
             @Override
             public void onClick(View view) {
                 dateAndTime = Calendar.getInstance();
@@ -181,6 +197,10 @@ public class DataCollectionActivity extends AppCompatActivity {
             }
         });
         save.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Нажатие на кнопку сохранить
+             * @param view View кнопки сохранить
+             */
             @Override
             public void onClick(View view) {
                 String tmp = "";

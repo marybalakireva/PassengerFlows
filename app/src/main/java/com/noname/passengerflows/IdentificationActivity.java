@@ -62,14 +62,14 @@ public class IdentificationActivity extends AppCompatActivity {
     }
 
     /**
-     * Слушатель кнопок. Обрабатывает единственную кнопку - begin.
-     * По нажатию на кнопку вызывается метод saveSettings().
+     * Слушатель нажатий на кнопки     *
      */
     private void addOnCLickButtonListener() {
         begin.setOnClickListener(new View.OnClickListener() {
             /**
-             * Нажатие на кнопку begin
-             * @param view
+             * Нажатие на кнопку "начать работу"
+             * По нажатию на кнопку вызывается метод saveSettings()
+             * @param view View кнопки "начать работу"
              */
             @Override
             public void onClick(View view) {
@@ -86,10 +86,12 @@ public class IdentificationActivity extends AppCompatActivity {
     private void saveSettings() {
         SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString("name", fullName.getText().toString());
-        editor.putString("phone", phone.getText().toString());
-        editor.apply();
-        finish();
+        if (!fullName.getText().toString().isEmpty() && !phone.getText().toString().isEmpty()) {
+            editor.putString("name", fullName.getText().toString());
+            editor.putString("phone", phone.getText().toString());
+            editor.apply();
+            finish();
+        } else Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show();
     }
 
     /**
